@@ -1,0 +1,29 @@
+
+<mat-card><div class="card-body">
+        <div class="form-group">
+            <label for="todoiItem"><strong>Todo Item</strong></label>
+            <input type="text"
+            #todoItem class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="isCompleted"><strong>Is Completed</strong></label>
+            <select class="form-control" #isCompleted>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+  </select>
+        </div>
+        <button
+        *ngIf="!iseditMode"
+        (click)="OnTodoAdd()"
+        mat-raised-button class="w-100" color="primary">
+                 Add Todo
+        </button>
+        <button
+        *ngIf="iseditMode"
+        (click)="OnTodoUpdate()"
+        mat-raised-button class="w-100" color="primary">
+                 Update Todo
+        </button>
+    </div>
+</mat-card>

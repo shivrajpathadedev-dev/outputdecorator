@@ -1,0 +1,19 @@
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.right-content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status{
+    font-size: 18px;
+    font-weight: 600;
+}
