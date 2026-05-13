@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-md-4">
+        <app-student-form 
+        (emitUpdateStudent)="getUpdatestd($event)"
+        (emitNewStudent)="getNewstd($event)"
+        [getobj]="editobj"
+        ></app-student-form>
+    </div>
+    <div class="col-md-8">
+        <app-student-list
+        
+        (emitEditStd)="getEditstd($event)"
+          (emitRemoevId)="getRemoveId($event)"
+        [getstudent]="studentsArr"></app-student-list>
+    </div>
+</div>

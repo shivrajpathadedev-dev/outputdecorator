@@ -1,7 +1,7 @@
 <div class="row">
    <div class="col-md-6">
-      <app-todo-form (emitNewTodo)="getNewTodo($event)" [getedit]="edittodoobj"
-      (emitodoadd)="onemitevent($event)"></app-todo-form>
+      <app-todo-form (emitNewTodo)="getNewTodo($event)" (emitodoadd)="onemitevent($event)"
+         [getedit]="edittodoobj"></app-todo-form>
    </div>
    <div class="col-md-6">
       <app-todo-list (emitEditTodo)="getEditTod($event)" (emitRemoveId)="getRemoveId($event)"

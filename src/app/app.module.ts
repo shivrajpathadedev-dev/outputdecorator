@@ -13,6 +13,9 @@ import { MaterialModule } from './material/material.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { GetConfirmComponent } from './get-confirm/get-confirm.component';
+import { StudentDashboardComponent } from './component/student-dashboard/student-dashboard.component';
+import { StudentListComponent } from './component/student-list/student-list.component';
+import { StudentFormComponent } from './component/student-form/student-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { GetConfirmComponent } from './get-confirm/get-confirm.component';
     TodoFormComponent,
     TodoListComponent,
     GetConfirmComponent,
+    StudentDashboardComponent,
+    StudentListComponent,
+    StudentFormComponent,
   ],
   imports: [
     BrowserModule,

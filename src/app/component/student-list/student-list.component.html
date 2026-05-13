@@ -1,0 +1,41 @@
+
+<mat-card>
+<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr.No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>City</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let std of getstudent; let i=index ">
+                <td>{{i+1}}</td>
+                <td>{{std.name}}</td>
+                <td>{{std.course}}</td>
+                <td>{{std.city}}</td>
+                <td>{{std.age}}</td>
+                <td>
+                    <button 
+                    (click)="onEditstd(std)"
+                    mat-fab color="primary" class="mr-2">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </td>
+                <td>
+                    <button
+                    (click)="onRemovestd(std.id)"
+                    mat-fab color="warn">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</mat-card>
+    

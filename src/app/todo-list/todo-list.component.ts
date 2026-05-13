@@ -13,7 +13,6 @@ export class TodoListComponent implements OnInit {
 @Output() emitRemoveId:EventEmitter<string>=new EventEmitter<string>()
 @Output() emitEditTodo:EventEmitter<Itodo>=new EventEmitter<Itodo>()
 
-
   constructor(
     private _matdialog :  MatDialog
   ) { }

@@ -29,7 +29,7 @@ todosArr:Array<Itodo>=[
   }
 ]
   constructor(private _snackbarservice:SnackbarService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
   }
@@ -44,13 +44,15 @@ todosArr:Array<Itodo>=[
      this._snackbarservice.opensnack(`The todo ${removetodo[0].todoItem} is removed successfully!!!`)
   }
 
+  getEditTod(editTodo:Itodo){
+    this.edittodoobj=editTodo
+  }
+
   onemitevent(updatetodo:Itodo){
     let getIndexup=this.todosArr.findIndex(t=>(t.todoId===updatetodo.todoId))
     this.todosArr[getIndexup] =updatetodo
     this._snackbarservice.opensnack(`The todo ${updatetodo.todoItem} is Updated Successfully!!!`)
   }
 
-  getEditTod(editTodo:Itodo){
-    this.edittodoobj=editTodo
-  }
+  
 }

@@ -38,7 +38,6 @@ export class TodoFormComponent implements OnInit ,OnChanges{
       this.emitNewTodo.emit(todo)
     }
   }
-
   OnTodoUpdate() {
     let update_obj: Itodo = {
       todoItem: this.todoItem.nativeElement.value,
