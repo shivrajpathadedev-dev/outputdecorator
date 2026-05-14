@@ -13,7 +13,6 @@ getmsg!:string
     @Inject(MAT_DIALOG_DATA) msg :string
   ) { 
   this.getmsg=msg
-
   } 
 
   ngOnInit(): void {

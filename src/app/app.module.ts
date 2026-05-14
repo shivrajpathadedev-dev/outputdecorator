@@ -26,7 +26,7 @@ import { StudentFormComponent } from './component/student-form/student-form.comp
     GetConfirmComponent,
     StudentDashboardComponent,
     StudentListComponent,
-    StudentFormComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,

@@ -53,6 +53,4 @@ todosArr:Array<Itodo>=[
     this.todosArr[getIndexup] =updatetodo
     this._snackbarservice.opensnack(`The todo ${updatetodo.todoItem} is Updated Successfully!!!`)
   }
-
-  
 }
