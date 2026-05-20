@@ -16,7 +16,7 @@ export class TodoFormComponent implements OnInit ,OnChanges{
   @Output() emitodoadd: EventEmitter<Itodo> = new EventEmitter<Itodo>()
   constructor(
     private _todoService: TodoService
-  ) { }
+  ){}
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['getedit'].currentValue){
       this.todoItem.nativeElement.value=this.getedit.todoItem
@@ -39,14 +39,16 @@ export class TodoFormComponent implements OnInit ,OnChanges{
     }
   }
   OnTodoUpdate() {
-    let update_obj: Itodo = {
+    if(this.todoItem.nativeElement.value.length>0){
+      let update_obj: Itodo = {
       todoItem: this.todoItem.nativeElement.value,
       todoId: this.getedit.todoId,
       isCompleted: this.isCompleted.nativeElement.value
     }
     this.emitodoadd.emit(update_obj)
     this.iseditMode = false
-    this.todoItem.nativeElement.value = ''
+    this.todoItem.nativeElement.value =''
     this.isCompleted.nativeElement.value = 'true'
+    }
     }
 }

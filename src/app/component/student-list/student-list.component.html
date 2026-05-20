@@ -1,8 +1,8 @@
 
 <mat-card>
     <div class="table table-responsive">
-      <table class="table table-bordered">
-        <thead>
+      <table class="table table-bordered" *ngIf="getstudent.length>0;else noStudent">
+        <thead >
             <tr>
                 <th>Sr.No.</th>
                 <th>Name</th>
@@ -23,14 +23,14 @@
                 <td>
                     <button 
                     (click)="onEditstd(std)"
-                    mat-fab color="primary" class="mr-2">
+                    mat-mini-fab color="primary" class="mr-2">
                         <mat-icon>edit</mat-icon>
                     </button>
                 </td>
                 <td>
                     <button
                     (click)="onRemovestd(std.id)"
-                    mat-fab color="warn">
+                    mat-mini-fab color="warn">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </td>
@@ -39,4 +39,10 @@
     </table>
     </div>
 </mat-card>
+
+<ng-template #noStudent>
+    <p class="alert alert-info">
+        No Student Data is Availale!!!
+    </p>
+</ng-template>
     

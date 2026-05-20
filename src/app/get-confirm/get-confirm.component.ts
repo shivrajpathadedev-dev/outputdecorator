@@ -21,5 +21,4 @@ getmsg!:string
   onClick(flag:boolean){
     this._matdilogref.close(flag)
   }
-
 }

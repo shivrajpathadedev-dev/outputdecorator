@@ -34,7 +34,6 @@ export class TodoListComponent implements OnInit {
       }
     })
   }
-
   onEidttodo(edittodo:Itodo){
     // console.log(edittodo);
    this.emitEditTodo.emit(edittodo)
